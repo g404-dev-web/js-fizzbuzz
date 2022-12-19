@@ -6,10 +6,38 @@
 
 'use strict';
 
-var fizzbuzz = function (x) {
-//
-// YOUR CODE GOES HERE
-//
+let fizzbuzz = function (x) {
+   
+
+
+const divisiblePar3 = (x % 3 === 0);
+const divisiblePar5 = (x % 5 === 0);
+
+let FizzBuzz = "";
+
+if (divisiblePar3 && x % 5 != 0){
+    console.log("fizz")
+    return FizzBuzz += "Fizz";
+}
+
+else if (divisiblePar5 && x % 3 != 0) {
+    console.log("Buzz")
+    return FizzBuzz += "Buzz";
+}
+
+else if (divisiblePar3 && divisiblePar5){
+    console.log("fizzbuzz")
+    return FizzBuzz += "fizzbuzz" ;
+}
+else {
+    console.log(x)
+    return x
 };
 
-module.exports = { fizzbuzz: fizzbuzz };
+};
+
+fizzbuzz(2) 
+fizzbuzz(5) 
+fizzbuzz(6) 
+fizzbuzz(11) 
+fizzbuzz(30) 
